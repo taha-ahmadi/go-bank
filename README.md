@@ -8,10 +8,10 @@ Money transfer transaction (Perform money transfer between 2 account consistentl
 TODO:
 
 - [ ] make DockerFile & docker-compose
-- [ ] use PostgresSQL
+- [x] use PostgresSQL
 - [ ] Implement CRUD transaction services
 - [ ] Fix DB transaction lock and handle deadlock issue
 - [ ] use gRPC
-- [ ] Setup GitHub action
+- [x] Setup GitHub action
 - [ ] Implement user login with JWT access token
 - [ ] use k8s
