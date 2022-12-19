@@ -9,9 +9,12 @@ TODO:
 
 - [ ] make DockerFile & docker-compose
 - [x] use PostgresSQL
-- [ ] Implement CRUD transaction services
-- [ ] Fix DB transaction lock and handle deadlock issue
+- [x] Implement CRUD transaction services
+- [x] Fix DB transaction lock and handle deadlock issue
 - [ ] use gRPC
 - [x] Setup GitHub action
-- [ ] Implement user login with JWT access token
+- [x] Implement user login with JWT access token
+- [ ] Add factory & seeder
+- [ ] Add API documentation
+- [ ] Add middleware
 - [ ] use k8s

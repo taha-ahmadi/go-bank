@@ -26,5 +26,10 @@ server:
 mock:
 	mockgen -package mockdb -destination db/mock/store.go github.com/taha-ahmadi/go-bank/db/sqlc Store
 
+migratedownlast:
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc test server mock
+migrateuplast:
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test server mock migratedownlast migrateuplast

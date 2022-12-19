@@ -2,7 +2,6 @@ package api
 
 import (
 	"database/sql"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	db "github.com/taha-ahmadi/go-bank/db/sqlc"
 	"net/http"
@@ -80,9 +79,6 @@ func (s *Server) listAccount(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
 		return
 	}
-	fmt.Println(accounts)
-	fmt.Println(arg)
-	fmt.Println(req.PageSize)
 
 	ctx.JSON(http.StatusOK, accounts)
 }
