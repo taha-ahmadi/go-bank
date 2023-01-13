@@ -34,7 +34,7 @@ func newUserResponse(user db.User) userResponse {
 	}
 }
 
-func (s *Server) createUser(ctx *gin.Context) {
+func (s Server) createUser(ctx *gin.Context) {
 	var req createUserRequest
 	if err := ctx.ShouldBindJSON(&req); err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
