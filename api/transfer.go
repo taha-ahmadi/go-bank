@@ -15,7 +15,7 @@ type transferRequest struct {
 	Currency      string `json:"currency" binding:"required,currency"`
 }
 
-func (s *Server) createTransfer(ctx *gin.Context) {
+func (s Server) createTransfer(ctx *gin.Context) {
 	var req transferRequest
 	if err := ctx.ShouldBindJSON(&req); err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
@@ -45,7 +45,7 @@ func (s *Server) createTransfer(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, transfer)
 }
 
-func (s *Server) validAccount(ctx *gin.Context, accountID int64, currency string) bool {
+func (s Server) validAccount(ctx *gin.Context, accountID int64, currency string) bool {
 	acc, err := s.store.GetAccount(ctx, accountID)
 	if err != nil {
 		if err == sql.ErrNoRows {

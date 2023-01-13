@@ -18,8 +18,8 @@ func main() {
 	if err != nil {
 		log.Fatalln("cannot connect to db:", err)
 	}
-
 	store := db.NewStore(conn)
+
 	server, err := api.NewServer(config, store)
 	if err != nil {
 		log.Fatalln("cannot run the server:", err)
