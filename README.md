@@ -16,5 +16,5 @@ TODO:
 - [x] Implement user login with JWT access token
 - [ ] Add factory & seeder
 - [ ] Add API documentation
-- [ ] Add middleware
+- [x] Add middleware
 - [ ] use k8s
